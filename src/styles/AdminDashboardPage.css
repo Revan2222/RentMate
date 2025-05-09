@@ -1,0 +1,297 @@
+.admin-dashboard {
+  padding: var(--space-6);
+  background-color: white;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-6);
+}
+
+.add-property-btn {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.stats-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+  margin-bottom: var(--space-8);
+}
+
+.stat-card {
+  background-color: var(--color-primary-50);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.stat-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-primary-900);
+  line-height: 1;
+  margin-bottom: var(--space-2);
+}
+
+.stat-label {
+  color: var(--color-primary-600);
+  font-size: 0.9rem;
+}
+
+.stat-card:first-child {
+  background-color: rgba(22, 101, 216, 0.1);
+}
+
+.stat-card:nth-child(2) {
+  background-color: rgba(16, 185, 129, 0.1);
+}
+
+.stat-card:nth-child(3) {
+  background-color: rgba(245, 158, 11, 0.1);
+}
+
+.stat-card:nth-child(4) {
+  background-color: rgba(239, 68, 68, 0.1);
+}
+
+.view-bookings-link {
+  display: inline-block;
+  margin-top: var(--space-2);
+  font-size: 0.85rem;
+  color: var(--color-error-500);
+  text-decoration: underline;
+}
+
+.manage-properties {
+  background-color: var(--color-primary-50);
+  border-radius: var(--radius-md);
+  padding: var(--space-6);
+}
+
+.manage-properties h3 {
+  margin-bottom: var(--space-4);
+  color: var(--color-primary-900);
+}
+
+.property-filters {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--space-4);
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.search-container {
+  flex: 1;
+  min-width: 250px;
+}
+
+.property-search {
+  width: 100%;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-primary-300);
+  border-radius: var(--radius-md);
+}
+
+.status-filter {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.status-filter select {
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-primary-300);
+  border-radius: var(--radius-md);
+}
+
+.properties-table-container {
+  margin-top: var(--space-4);
+  overflow-x: auto;
+}
+
+.properties-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.properties-table th,
+.properties-table td {
+  padding: var(--space-3);
+  text-align: left;
+  border-bottom: 1px solid var(--color-primary-200);
+}
+
+.properties-table th {
+  font-weight: 600;
+  color: var(--color-primary-700);
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.image-col {
+  width: 100px;
+}
+
+.image-cell {
+  width: 100px;
+}
+
+.property-thumbnail {
+  width: 80px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+}
+
+.no-image {
+  width: 80px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-primary-200);
+  border-radius: var(--radius-sm);
+  font-size: 0.7rem;
+  color: var(--color-primary-600);
+}
+
+.title-cell {
+  max-width: 300px;
+}
+
+.property-title-link {
+  color: var(--color-primary-900);
+  font-weight: 500;
+  transition: color var(--transition-fast);
+}
+
+.property-title-link:hover {
+  color: var(--color-accent-500);
+}
+
+.price-cell {
+  font-weight: 600;
+  color: var(--color-accent-500);
+}
+
+.status-badge {
+  display: inline-block;
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-md);
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.status-badge.available {
+  background-color: var(--color-success-500);
+  color: white;
+}
+
+.status-badge.rented {
+  background-color: var(--color-primary-500);
+  color: white;
+}
+
+.status-badge.maintenance {
+  background-color: var(--color-warning-500);
+  color: white;
+}
+
+.actions-cell {
+  white-space: nowrap;
+}
+
+.edit-btn,
+.delete-btn {
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-md);
+  margin-right: var(--space-2);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.edit-btn {
+  background-color: var(--color-primary-200);
+  color: var(--color-primary-800);
+}
+
+.edit-btn:hover {
+  background-color: var(--color-primary-300);
+}
+
+.delete-btn {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: var(--color-error-500);
+}
+
+.delete-btn:hover {
+  background-color: var(--color-error-500);
+  color: white;
+}
+
+.no-properties-message {
+  padding: var(--space-8);
+  text-align: center;
+  color: var(--color-primary-500);
+}
+
+.no-properties-message p {
+  margin-bottom: var(--space-4);
+}
+
+@media (max-width: 1024px) {
+  .stats-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-3);
+  }
+  
+  .add-property-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .property-filters {
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+  
+  .properties-table th,
+  .properties-table td {
+    padding: var(--space-2);
+    font-size: 0.9rem;
+  }
+  
+  .image-col,
+  .image-cell {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-cards {
+    grid-template-columns: 1fr;
+  }
+}

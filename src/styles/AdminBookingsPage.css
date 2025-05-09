@@ -1,0 +1,320 @@
+.admin-bookings-page {
+  padding: var(--space-6);
+  background-color: white;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.booking-filters {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--space-4);
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.search-container {
+  flex: 1;
+  min-width: 250px;
+}
+
+.booking-search {
+  width: 100%;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-primary-300);
+  border-radius: var(--radius-md);
+}
+
+.status-filter {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.status-filter select {
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-primary-300);
+  border-radius: var(--radius-md);
+}
+
+.bookings-table-container {
+  margin-top: var(--space-4);
+  overflow-x: auto;
+}
+
+.bookings-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.bookings-table th,
+.bookings-table td {
+  padding: var(--space-3);
+  text-align: left;
+  border-bottom: 1px solid var(--color-primary-200);
+}
+
+.bookings-table th {
+  font-weight: 600;
+  color: var(--color-primary-700);
+  background-color: var(--color-primary-100);
+}
+
+.tenant-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.tenant-name {
+  font-weight: 500;
+}
+
+.tenant-phone {
+  font-size: 0.85rem;
+  color: var(--color-primary-500);
+}
+
+.status-badge {
+  display: inline-block;
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-md);
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.status-badge.pending {
+  background-color: var(--color-warning-500);
+  color: white;
+}
+
+.status-badge.approved {
+  background-color: var(--color-success-500);
+  color: white;
+}
+
+.status-badge.rejected {
+  background-color: var(--color-error-500);
+  color: white;
+}
+
+.actions-cell {
+  white-space: nowrap;
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.view-btn,
+.approve-btn,
+.reject-btn,
+.delete-btn {
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-md);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.view-btn {
+  background-color: var(--color-primary-200);
+  color: var(--color-primary-800);
+}
+
+.view-btn:hover {
+  background-color: var(--color-primary-300);
+}
+
+.approve-btn {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: var(--color-success-500);
+}
+
+.approve-btn:hover {
+  background-color: var(--color-success-500);
+  color: white;
+}
+
+.reject-btn {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: var(--color-error-500);
+}
+
+.reject-btn:hover {
+  background-color: var(--color-error-500);
+  color: white;
+}
+
+.delete-btn {
+  background-color: rgba(239, 68, 68, 0.05);
+  color: var(--color-error-500);
+}
+
+.delete-btn:hover {
+  background-color: rgba(239, 68, 68, 0.2);
+}
+
+.booking-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: var(--space-4);
+}
+
+.booking-modal {
+  background-color: white;
+  border-radius: var(--radius-lg);
+  width: 100%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.close-modal {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--color-primary-200);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.close-modal:hover {
+  background-color: var(--color-primary-300);
+}
+
+.booking-modal-header {
+  padding: var(--space-6) var(--space-6) var(--space-4);
+  border-bottom: 1px solid var(--color-primary-200);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.booking-modal-header h3 {
+  margin: 0;
+  color: var(--color-primary-900);
+}
+
+.booking-modal-body {
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.booking-property-details,
+.booking-tenant-details,
+.booking-feedback,
+.booking-id-proof {
+  background-color: var(--color-primary-50);
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+}
+
+.booking-property-details h4,
+.booking-tenant-details h4,
+.booking-feedback h4,
+.booking-id-proof h4 {
+  margin-top: 0;
+  margin-bottom: var(--space-3);
+  color: var(--color-primary-800);
+  font-size: 1.1rem;
+}
+
+.property-title {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: var(--space-1);
+}
+
+.property-location {
+  color: var(--color-primary-600);
+  margin-bottom: var(--space-1);
+}
+
+.property-rent {
+  font-weight: 600;
+  color: var(--color-accent-500);
+}
+
+.detail-group {
+  display: flex;
+  margin-bottom: var(--space-2);
+}
+
+.detail-label {
+  flex: 0 0 130px;
+  font-weight: 500;
+  color: var(--color-primary-700);
+}
+
+.detail-value {
+  flex: 1;
+}
+
+.id-proof-preview {
+  width: 100%;
+  max-height: 200px;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  margin-top: var(--space-2);
+}
+
+.id-proof-preview img {
+  width: 100%;
+  height: auto;
+}
+
+.booking-modal-actions {
+  padding: var(--space-4) var(--space-6) var(--space-6);
+  display: flex;
+  gap: var(--space-3);
+  justify-content: flex-end;
+  border-top: 1px solid var(--color-primary-200);
+}
+
+.no-bookings-message {
+  padding: var(--space-8);
+  text-align: center;
+  color: var(--color-primary-500);
+}
+
+@media (max-width: 768px) {
+  .booking-filters {
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+  
+  .bookings-table th,
+  .bookings-table td {
+    padding: var(--space-2);
+    font-size: 0.9rem;
+  }
+  
+  .actions-cell {
+    flex-direction: column;
+  }
+  
+  .booking-modal-actions {
+    flex-direction: column;
+  }
+  
+  .booking-modal-actions button {
+    width: 100%;
+  }
+}

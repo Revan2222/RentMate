@@ -1,0 +1,30 @@
+.favorites-page {
+  padding: var(--space-6) 0;
+}
+
+.no-favorites {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-8);
+  text-align: center;
+  background-color: white;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.no-favorites-message h3 {
+  margin-bottom: var(--space-3);
+  color: var(--color-primary-800);
+}
+
+.no-favorites-message p {
+  margin-bottom: var(--space-6);
+  color: var(--color-primary-600);
+  max-width: 500px;
+}
+
+.favorites-grid {
+  margin-top: var(--space-6);
+}
