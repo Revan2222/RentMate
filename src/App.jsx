@@ -1,8 +1,11 @@
-import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Navigate, useParams, useNavigate} from 'react-router-dom';
 import { AuthProvider } from './contexts/AuthContext';
 import { PropertyProvider } from './contexts/PropertyContext';
 import { BookingProvider } from './contexts/BookingContext';
 import { FavoriteProvider } from './contexts/FavoriteContext';
+import { useProperties } from './contexts/PropertyContext';
+
+import React, { useState, useEffect } from 'react';
 
 import ProtectedRoute from './components/ProtectedRoute';
 import AdminRoute from './components/AdminRoute';
